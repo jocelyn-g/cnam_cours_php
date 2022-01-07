@@ -117,29 +117,43 @@
     $b = (int) $cartesRemove2[0];
     dump($b);
 
+
+    $nomCartes = $cartesRemove[0];
+    $nomCartes = preg_replace('/^1 /', 'As ', $nomCartes );
+    $nomCartes = preg_replace('/^11 /', 'Valet ', $nomCartes );
+    $nomCartes = preg_replace('/^12 /', 'Dame ', $nomCartes );
+    $nomCartes = preg_replace('/^13 /', 'Roi ', $nomCartes );
+    $nomCartes2 = $cartesRemove2[0];
+    $nomCartes2 = preg_replace('/^1 /', 'As ', $nomCartes2 );
+    $nomCartes2 = preg_replace('/^11 /', 'Valet ', $nomCartes2 );
+    $nomCartes2 = preg_replace('/^12 /', 'Dame ', $nomCartes2 );
+    $nomCartes2 = preg_replace('/^13 /', 'Roi ', $nomCartes2 );
+
     if ($a == 1 || $b == 1){
 
         if($b == 1){
 
-            echo $cartesRemove2[0]." est plus forte que ". $cartesRemove[0];
+            echo $nomCartes2." est plus forte que ". $nomCartes;
 
         } else{
 
-            echo $cartesRemove[0]." est plus forte que ". $cartesRemove2[0];
+            echo $nomCartes." est plus forte que ". $nomCartes2;
 
         }
 
     }else {
         if($a < $b){
 
-            echo $cartesRemove2[0]." est plus forte que ". $cartesRemove[0];
+            echo $nomCartes2." est plus forte que ". $nomCartes;
 
         } else{
 
-            echo $cartesRemove[0]." est plus forte que ". $cartesRemove2[0];
+            echo $nomCartes." est plus forte que ". $nomCartes2;
 
         }
     }
+
+    
 
 
     ?>
