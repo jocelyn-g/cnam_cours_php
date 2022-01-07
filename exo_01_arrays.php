@@ -25,19 +25,42 @@
     require __DIR__.'/vendor/autoload.php';
 
     $cartes = [
-        'As Pique',
-        '3 Carreau',
-        'Valet Treffle',
-        '9 Coeur',
+        '1 Pique',
+        '2 Pique',
+        '3 Pique',
+        '4 Pique',
+        '5 Pique',
         '6 Pique',
+        '7 Pique',
+        '8 Pique',
+        '9 Pique',
+        '10 Pique',
+        'Valet Pique',
+        'Reine Pique',
+        'Roi Pique',
+        '1 Treffle',
+        '2 Treffle',
+        '3 Treffle',
+        '4 Treffle',
+        '5 Treffle',
+        '6 Treffle',
+        '7 Treffle',
+        '8 Treffle',
+        '9 Treffle',
+        '10 Treffle',
+        'Valet Treffle',
+        'Reine Treffle',
+        'Roi Treffle',
     ];
 
+    $taille = count($cartes);
+
     // @warning test de dump
-    echo "Voici les 5 cartes<br>\n";
+    echo "Voici les ".$taille." cartes<br>\n";
     dump($cartes);
 
 
-    $c = random_int(1, 5);
+    $c = random_int(1, $taille-1);
 
     $cartesRemove = array_splice(
         $cartes,
@@ -45,9 +68,11 @@
         1,
     );
 
+    $newtaille = $taille -1;
+
     // @warning test de dump
     echo "Voici la carte au hasrd qui est retirer \"".$cartesRemove[0]." qui est la carte n°".$c."\"<br>\n";
-    echo "Voici les 4 cartes restant<br>\n";
+    echo "Voici les ".$newtaille." cartes restant<br>\n";
     dump($cartes);
 
     ?>
