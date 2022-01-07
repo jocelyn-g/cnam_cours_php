@@ -56,6 +56,45 @@
         '11 Pique', /* Valet */
         '12 Pique', /* Dame */
         '13 Pique', /* Roi */
+        '1 Treffle',
+        '2 Treffle',
+        '3 Treffle',
+        '4 Treffle',
+        '5 Treffle',
+        '6 Treffle',
+        '7 Treffle',
+        '8 Treffle',
+        '9 Treffle',
+        '10 Treffle',
+        'Valet Treffle',
+        'Reine Treffle',
+        'Roi Treffle',
+        '1 Carreau',
+        '2 Carreau',
+        '3 Carreau',
+        '4 Carreau',
+        '5 Carreau',
+        '6 Carreau',
+        '7 Carreau',
+        '8 Carreau',
+        '9 Carreau',
+        '10 Carreau',
+        'Valet Carreau',
+        'Reine Carreau',
+        'Roi Carreau',
+        '1 coeur',
+        '2 coeur',
+        '3 coeur',
+        '4 coeur',
+        '5 coeur',
+        '6 coeur',
+        '7 coeur',
+        '8 coeur',
+        '9 coeur',
+        '10 coeur',
+        'Valet coeur',
+        'Reine coeur',
+        'Roi coeur',
     ];
     echo "affiche les cartes";
     dump($cartes);
@@ -129,28 +168,35 @@
     $nomCartes2 = preg_replace('/^12 /', 'Dame ', $nomCartes2 );
     $nomCartes2 = preg_replace('/^13 /', 'Roi ', $nomCartes2 );
 
-    if ($a == 1 || $b == 1){
+    if ($a == $b){
 
-        if($b == 1){
+        echo $nomCartes." est au même niveau que ". $nomCartes2;
 
-            echo $nomCartes2." est plus forte que ". $nomCartes;
-
-        } else{
-
-            echo $nomCartes." est plus forte que ". $nomCartes2;
-
+    } else{
+        if ($a == 1 || $b == 1){
+    
+            if($b == 1){
+    
+                echo $nomCartes2." est plus forte que ". $nomCartes;
+    
+            } else{
+    
+                echo $nomCartes." est plus forte que ". $nomCartes2;
+    
+            }
+    
+        }else {
+            if($a < $b){
+    
+                echo $nomCartes2." est plus forte que ". $nomCartes;
+    
+            } else{
+    
+                echo $nomCartes." est plus forte que ". $nomCartes2;
+    
+            }
         }
 
-    }else {
-        if($a < $b){
-
-            echo $nomCartes2." est plus forte que ". $nomCartes;
-
-        } else{
-
-            echo $nomCartes." est plus forte que ". $nomCartes2;
-
-        }
     }
 
     
