@@ -60,7 +60,7 @@
     dump($cartes);
 
 
-    $c = random_int(1, $taille-1);
+    $c = random_int(1, $taille);
 
     $cartesRemove = array_splice(
         $cartes,
@@ -71,7 +71,7 @@
     $newtaille = $taille -1;
 
     // @warning test de dump
-    echo "Voici la carte au hasrd qui est retirer \"".$cartesRemove[0]." qui est la carte n°".$c."\"<br>\n";
+    echo "Voici la carte au hasrd qui est retirer \"".$cartesRemove[0]."\" qui est la carte n°".$c."<br>\n";
     echo "Voici les ".$newtaille." cartes restant<br>\n";
     dump($cartes);
 
