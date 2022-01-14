@@ -10,13 +10,13 @@ for ($i = 0 ; $i <= 9 ; $i++){
 
         echo "première itération => " . $i."<br>\n";
 
-    }   elseif ($i == 9){
+    } elseif ($i == 9){
 
-            echo "dernière itération => " . $i."<br>\n";
+        echo "dernière itération => " . $i."<br>\n";
 
-        }   else{
+    } else{
 
-                echo "itération N°". $i+1 ." => " . $i."<br>\n";
+        echo "itération N°". $i+1 ." => " . $i."<br>\n";
 
-            }
+    }
 }
