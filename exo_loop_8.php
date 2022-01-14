@@ -38,47 +38,42 @@ Ensuite, utilisez deux boucles foreach imbriquées pour afficher tous les élém
 
 $colors = ['cœur', 'carreau', 'treffle', 'pique'];
 
-foreach ($colors as $color){
+// On créer un tableau vide
+$cartes = [];
 
-    // On créer un tableau vide
-    $cartes = [];
+// On créer une première boucle pour chaque couleur des cartes
+for ($color = 0 ; $color < 4 ; $color++ ){
+    
+    // On créer une seconde boucle pour chaque N° de carte
+    for ($i = 0 ; $i < 13 ; $i++){
 
-    for ($i = 1 ; $i <= 13 ; $i++){
-        $cartes[] = $i;
-        $color= $cartes;
+        // On créer un varible afin de récup la valeur de chaque carte
+        $num = $i +1 ;
+        // On créer un tableau dans lequel on insert les information des cartes
+        $tab = [
+            'value' => $num,
+            'color' => $colors[$color],
+        ] ;
+
+        // On insert les info des cartes dans le tableau principal
+        $cartes[] = $tab;
     }
 
+
+
 }
 
-dump($colors);
 
 
 
+// on boucle un prémière fois la tableau
+foreach ($cartes as $carte){
 
-
-
-
-
-
-
-/*
-
-
-// On traduit certaine carte (exemple : 1 => As)
-$nomCartes = $cartes;
-$nomCartes = preg_replace('/^1 /', 'As ', $nomCartes );
-$nomCartes = preg_replace('/^11 /', 'Valet ', $nomCartes );
-$nomCartes = preg_replace('/^12 /', 'Dame ', $nomCartes );
-$nomCartes = preg_replace('/^13 /', 'Roi ', $nomCartes );
-
-// On boucle le tableau afin d'afficher toute les cartes du tableau
-foreach ($nomCartes as $nomCarte){
-    echo $nomCarte."<br>\n";
+    // on boucle un seconde fois le tableau
+    foreach ($carte as $c){
+        
+        // On affiche chaque résultat
+        echo "$c ";
+    }
+    echo "<br>\n";
 }
-*/
-
-/*
-foreach ($tab as $b){
-echo $b."<br>";
-}
-*/
