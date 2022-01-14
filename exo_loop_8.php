@@ -42,17 +42,15 @@ $colors = ['cœur', 'carreau', 'treffle', 'pique'];
 $cartes = [];
 
 // On créer une première boucle pour chaque couleur des cartes
-for ($color = 0 ; $color < 4 ; $color++ ){
+foreach ($colors as $color ){
     
     // On créer une seconde boucle pour chaque N° de carte
-    for ($i = 0 ; $i < 13 ; $i++){
+    for ($i = 1 ; $i <= 13 ; $i++){
 
-        // On créer un varible afin de récup la valeur de chaque carte
-        $num = $i +1 ;
         // On créer un tableau dans lequel on insert les information des cartes
         $tab = [
-            'value' => $num,
-            'color' => $colors[$color],
+            'value' => $i,
+            'color' => $color,
         ] ;
 
         // On insert les info des cartes dans le tableau principal
