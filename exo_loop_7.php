@@ -11,11 +11,9 @@ Ensuite, utilisez une boucle foreach pour afficher tous les éléments du tablea
 $cartes = [];
 
 // On fait une boucle pour créer chaque cartes
-for ($i = 0 ; $i < 13 ; $i++){
-    // On créer un varible afin de récup la valeur de chaque carte
-    $num = $i +1 ;
+for ($i = 1 ; $i <= 13 ; $i++){
 
-    $cartes[] = "$num Coeur";
+    $cartes[] = "$i Coeur";
 }
 
 // On traduit certaine carte (exemple : 1 => As)
