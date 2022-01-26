@@ -62,7 +62,7 @@ require __DIR__.'/vendor/autoload.php';
                     <?= $errors['alias'] ?>
                 <?php endif ?>
             </div>
-            <input type="text" name="alias" placeholder="votre nom d'utilisateur" value="<?php if(isset($_POST['alias'])){echo $alias;}?>">
+            <input type="text" name="alias" placeholder="votre nom d'utilisateur" value="<?= htmlentities($_POST['alias'] ?? '') ?>">
         </div>
         <div>
             <div class="error">
@@ -70,7 +70,7 @@ require __DIR__.'/vendor/autoload.php';
                     <?= $errors['email'] ?>
                 <?php endif ?>
             </div>
-            <input type="email" name="email" placeholder="votre mail" value="<?php if(isset($_POST['email'])){echo $email;}?>">
+            <input type="email" name="email" placeholder="votre mail" value="<?= htmlentities($_POST['email'] ?? '') ?>">
         </div>
         <div>
             <div class="error">
@@ -78,7 +78,7 @@ require __DIR__.'/vendor/autoload.php';
                     <?= $errors['password'] ?>
                 <?php endif ?>
             </div>
-            <input type="password" name="password" placeholder="votre mot de passe" value="<?php if(isset($_POST['password'])){echo $password;}?>">
+            <input type="password" name="password" placeholder="votre mot de passe" value="<?= htmlentities($_POST['password'] ?? '') ?>">
         </div>
         <div>
             <button type="submit">Valider</button>
